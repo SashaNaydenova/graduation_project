@@ -1,3 +1,6 @@
+# Александра Найденова, 29-я когорта — Финальный проект. Инженер по тестированию плюс
+
+
 import sender_stand_request
 import configuration
 import requests
