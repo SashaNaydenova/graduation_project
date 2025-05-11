@@ -4,11 +4,10 @@
 import sender_stand_request
 import configuration
 import requests
-import data 
+import data
+
 
 def test_get_order_by_track():
-    track = sender_stand_request.get_new_order_track()
-    return requests.get(configuration.URL_SERVICE + configuration.GET_ORDER_BY_NUMBER + str(track))
-
-response=test_get_order_by_track()
-assert response.status_code == 200
+    track_number = sender_stand_request.get_new_order_track()
+    response = sender_stand_request.get_order_by_track(track_number)
+    assert response.status_code == 200
